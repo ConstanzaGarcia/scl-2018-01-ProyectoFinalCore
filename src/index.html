@@ -10,24 +10,24 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
-  <title>Registro</title>
+  <title>Registro de visitas IF</title>
 
-  <link rel="shortcut icon" type="image/x-icon" href="/img/logoif.png">
+  <link rel="shortcut icon" type="image/x-icon" href="../img/logoif.png">
 
 </head>
 
 <body>
-
+  <div class="container-fluid" id="register">
   <header id="bienvenido">
     <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <h1>Bienvenido a IF Blanco Recoleta </h1>
+      <div class="col-md-12">
+        <img src="../img/logoifpequeño.png" id="logoInicio" alt="logoif">
+        <h1 id="title">Bienvenido a IF Blanco Recoleta </h1>
         <p>Ingresa tus datos para comenzar tu visita</p>
       </div>
     </div>
   </header>
-  <div class="container-fluid" id="register">
-
+  
     <section id="datos">
       <div class="row">
         <div class="col-md-6 offset-md-3">
@@ -45,7 +45,7 @@
             <div class="form-group">
               <input class="form-control form-control-sm" type="text" placeholder="Nombre y apellido">
               <input class="form-control form-control-sm" type="text" placeholder="Rut">
-              <input class="form-control form-control-sm" type="text" placeholder="correo electornico">
+              <input class="form-control form-control-sm" type="text" placeholder="Patente (Sólo si estacionó en IF)">
             </div>
           </form>
         </div>
@@ -54,7 +54,7 @@
       <div class="row">
         <div class="col-md-6 offset-md-3">
           <select class="custom-select" size="3">
-            <option selected>Open this select menu</option>
+            <option selected><strong>¿A quien visitas?</strong></option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
@@ -65,16 +65,12 @@
       <div class="row">
         <div class="col-md-6 offset-md-3">
 
-          <button type="button" class="btn btn-secondary btn-lg btn-block">ingresar visia</button>
+          <button type="button" class="btn btn-secondary btn-lg btn-block">ingresar visita</button>
         </div>
       </div>
 
 
     </section>
-
-    <footer>
-
-    </footer>
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>

@@ -1,22 +1,25 @@
+.container-fluid{
+  width: 100%;
+  padding: 0;
+}
+
+#title{
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
 #bienvenido {
-    background-color: black;
-    color: #E5E5E5;
-    padding: 4%;
-    text-align: center;
+  background-color: #222222;
+  color: #E5E5E5;
+  padding: 4%;
+  text-align: center;
 }
 
-#register {
-    background-image: url(/img/todos.jpg);
+#datos{
+  background-image: url(/img/fondo.jpg);
+  background-size: 100%;
+  color: #E5E5E5;
+  text-align: center;
+  padding: 3%;
 }
 
-#datos {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #E5E5E5;
-    text-align: center;
-    padding: 3%;
-}
-
-footer {
-    background-color: black;
-    padding: 3%;
-}
