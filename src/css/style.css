@@ -110,5 +110,50 @@ margin-bottom: 0.2%;
 
 .backgroundWeb{
   background-image: url(../../img/if.png);
+  width: 100vw;
   height: 50vw;
+}
+
+#listaInvitados{
+  display: none;
+}
+
+#invitadosContainer{
+  border: none;
+  background-color: white;
+  color: black;
+  width: 70%;
+  margin-left: 5%;
+  text-align: center;
+}
+.table{
+  margin-left: 3%;
+  width: 95%;
+}
+#toggleSort, .toggleSort{
+  margin-left: 3%;
+  background-color: white;
+  color: black;
+  width: 20%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#searchBox{
+  height: 30px;
+  border-radius: 2px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  outline: none;
+  margin-left: 3%;
+  background-color: white;  
+  color: grey;
+  text-align: left;
+}
+#namesItem{
+background-color: #F5DA81;
+color: #222222;
+text-align: center;
 }

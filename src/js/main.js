@@ -5,4 +5,7 @@
     }
   );
 
+document.getElementById('btnInfo').addEventListener('click', () => {
+  document.getElementById('listaInvitados').style.display = 'block';
+});
 

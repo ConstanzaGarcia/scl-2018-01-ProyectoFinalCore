@@ -48,8 +48,8 @@
           <form>
             <div class="form-group">
               <input class="form-control form-control-sm" type="text" id="inputName" placeholder="Nombre y apellido">
-              <input class="form-control form-control-sm" type="text"   id="inputRut" placeholder="Rut">
-              <input class="form-control form-control-sm" type="text"  id="inputPatente" placeholder="Patente (Sólo si estacionó en IF)">
+              <input class="form-control form-control-sm" type="text" id="inputRut" placeholder="Rut">
+              <input class="form-control form-control-sm" type="text" id="inputPatente" placeholder="Patente (Sólo si estacionó en IF)">
             </div>
           </form>
         </div>
@@ -70,22 +70,22 @@
 
       <div class="row">
         <div class="col-md-6 offset-md-3">
-          <button type="button" id="btnEnviarDatos" onclick="" class="btn btn-secondary btn-lg btn-block">Ingresar visita</button>
+          <button type="button" id="btnEnviarDatos" onclick="sendMessage()" class="btn btn-secondary btn-lg btn-block">Ingresar visita</button>
         </div>
       </div>
 
       <div class="row">
-          <div class="col-md-6 offset-md-3">
-            <button type="button" id="btnEnter" class="btn btn-secondary btn-lg btn-block">Ver datos y registros</button>
-          </div>
+        <div class="col-md-6 offset-md-3">
+          <button type="button" id="btnEnter" class="btn btn-secondary btn-lg btn-block">Ver datos y registros</button>
         </div>
+      </div>
     </section>
   </div>
 
   <!-- INICIO PANTALLA DATA -->
   <div class="container-fluid" id="pantallaData">
 
-     <!-- Inicio barra negra superior -->
+    <!-- Inicio barra negra superior -->
     <header>
       <div class="row topBar">
         <div class="col-12">
@@ -95,7 +95,7 @@
             </a>
             <a href="http://www.ifblanco.cl/">
               <i class="fas fa-home" id="web"></i>
-            </a> 
+            </a>
             <a href="https://www.instagram.com/if_blanco/">
               <i class="fab fa-instagram" id="instagram"></i>
             </a>
@@ -106,44 +106,71 @@
 
     <!-- Logo y título de pantalla data -->
     <div class="row titleWhite">
-        <div class="col-sm-12" id="titles2">
-          <h1>
-            <img src="../img/logoifpequeñoblack.png" id="logoInicio" alt="logoif"> Información sobre registro de visitas</h1>
-          <p>Aquí podras ver toda la información ingresada de cada visita</p>
-        </div>
+      <div class="col-sm-12" id="titles2">
+        <h1>
+          <img src="../img/logoifpequeñoblack.png" id="logoInicio" alt="logoif"> Información sobre registro de visitas</h1>
+        <p>Aquí podras ver toda la información ingresada de cada visita</p>
       </div>
+    </div>
 
-      <!-- Menú con opciones para ver -->
-       <!-- 5° row, Ciudades-->
-       <ul class="nav nav-tabs">
-          <li class="col-sm nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
-              Datos de visitas</a>
-            
-          </li>
-          <li class="col-sm nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
-              Empresas participantes</a>
-            
-          </li>
-          <li class="col-sm nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
-              Horarios IF</a>
-            
-          </li>
-          <li class="col-sm nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
-              Políticas del IF</a>
-          </li>
-        </ul>
+    <!-- Menú con opciones para ver -->
+    <!-- 5° row, Ciudades-->
+    <ul class="nav nav-tabs">
+      <li class="col-sm nav-item dropdown">
+        <a class="nav-link" id="btnInfo" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+          Datos de visitas</a>
 
-        <div class="row backgroundWeb">
-          dsa
-        </div>
+      </li>
+      <li class="col-sm nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+          Empresas participantes</a>
+
+      </li>
+      <li class="col-sm nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+          Horarios IF</a>
+
+      </li>
+      <li class="col-sm nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+          Políticas del IF</a>
+      </li>
+    </ul>
+
+    <!-- Seccion de fondo con imagen y datos -->
+    <div class="row backgroundWeb">
+
+      <div class="col-12" id="listaInvitados">
+        <!-- inicio busqueda por nombre -->
+        <a class="navbar-brand"></a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" id="searchBox" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por nombre..."
+            aria-label="Search">
+          <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <button id="toggleSort" class="toggleSort" onclick="onToggleSort()">Orden</button>
+        <table class="table table-bordered">
+          <thead>
+            <tr id="namesItem">
+              <th scope="col">Nombre</th>
+              <th scope="col">Rut</th>
+              <th scope="col">Patente</th>
+              <th scope="col">Hora de entrada</th>
+              <th scope="col">Visitó a:</th>
+            </tr>
+          </thead>
+          <tbody id="invitadosContainer">
+          </tbody>
+        </table>
+      </div>
+    </div>
 
 
 
-  </div> <!-- fin de container -->
+
+  </div>
+  <!-- fin de container -->
 
 
   <!-- Firebase -->
@@ -169,6 +196,7 @@
     crossorigin="anonymous"></script>
   <!-- javascript local -->
   <script src="js/main.js"></script>
+  <script src="js/data.js"></script>
 
 </body>
 
