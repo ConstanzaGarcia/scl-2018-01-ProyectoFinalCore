@@ -50,5 +50,6 @@ function sendMessage() {
   name.value = '';
   rut.value = '';
   patente.value = '';
+  alert('Datos ingresados correctamente, y notificación enviada con éxito');
 }    
 }         
