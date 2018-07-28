@@ -1,25 +1,81 @@
+body{
+  background-color: #222222;
+}
+
 .container-fluid{
-  width: 100%;
   padding: 0;
+  width: 100%;
+}
+
+/*PANTALLA DE INICIO DE REGISTRO*/
+#logoInicio{
+width: 7%;
+}
+
+@media(min-width: 500px) and (max-width: 800px) {
+  #logoInicio {
+      width: 12%;
+  }
+}
+@media(min-width: 150px) and (max-width: 499px) {
+  #logoInicio {
+      width: 13%;
+  }
 }
 
 #title{
-  width: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
-#bienvenido {
+#bienvenido{
   background-color: #222222;
   color: #E5E5E5;
-  padding: 4%;
+  padding-top: 5%;
   text-align: center;
 }
 
 #datos{
-  background-image: url(/img/fondo.jpg);
+  margin-top: 5%;
+  background-image: url(../../img/fondocopia.png);
   background-size: 100%;
   color: #E5E5E5;
   text-align: center;
   padding: 3%;
 }
+.form-control-sm{
+font-family: 'Roboto', sans-serif;
+margin-bottom: 1%;
+}
 
+
+/*PANTALLA DE DATA*/
+
+#pantallaData{
+  display: none;
+}
+
+.topBar {
+  background-color: black;
+  height: 2.5em;
+}
+#facebook{
+  color: white;
+  font-size: 1.5em;
+  margin: 0.3em 0.3em 0.3em 1em;
+}
+#instagram{
+  color: white;
+  font-size: 1.5em;
+  margin: 0.3em;
+}
+#web{
+  color: white;
+  font-size: 1.5em;
+  margin-left: 0.3em;
+}
+
+#titles2{
+  color: #E5E5E5;
+  text-align: center;
+  padding: 3%;
+}
