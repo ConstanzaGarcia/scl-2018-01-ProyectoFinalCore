@@ -73,9 +73,12 @@ margin-bottom: 0.2%;
   font-size: 1.5em;
   margin-left: 0.3em;
 }
-
+.titleWhite{
+  background-color: #E5E5E5;
+  
+}
 #titles2{
-  color: #E5E5E5;
+  color: #222222;;
   text-align: center;
   padding: 3%;
 }
@@ -91,14 +94,18 @@ margin-bottom: 0.2%;
   color: tan;
 }
 .nav-link{
-  background-color: #E5E5E5;
-  color: black;
+  background-color: #222222;
+  color: #E5E5E5;
   font-weight: bold;
   text-align: center;
 }
 .nav-link:hover{
-  background-color:#222222;
-  color: white;
+  background-color: white;
+  color: #222222;
+  
+}
+.nav-tabs{
+  background-color: #E5E5E5;
 }
 
 .backgroundWeb{
