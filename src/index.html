@@ -24,8 +24,7 @@
   <div class="container-fluid" id="register">
     <header id="bienvenido">
       <div class="row">
-        <div class="col-md-6 offset-md-3">
-
+        <div class="col-sm-12">
           <h1 id="title">
             <img src="../img/logoifpequeño.png" id="logoInicio" alt="logoif"> Bienvenido a IF Blanco Recoleta </h1>
           <p>Ingresa tus datos para comenzar tu visita</p>
@@ -71,21 +70,26 @@
 
       <div class="row">
         <div class="col-md-6 offset-md-3">
-
-          <button type="button" id="btnEnter" onclick="enter()" class="btn btn-secondary btn-lg btn-block">Ingresar visita</button>
+          <button type="button" id="btnEnviarDatos" onclick="" class="btn btn-secondary btn-lg btn-block">Ingresar visita</button>
         </div>
       </div>
+
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <button type="button" id="btnEnter" class="btn btn-secondary btn-lg btn-block">Ver datos y registros</button>
+          </div>
+        </div>
     </section>
   </div>
 
   <!-- INICIO PANTALLA DATA -->
   <div class="container-fluid" id="pantallaData">
+
+     <!-- Inicio barra negra superior -->
     <header>
-      <!-- Inicio barra negra superior -->
       <div class="row topBar">
         <div class="col-12">
           <span>
-            <!-- Iconos con enlaces-->
             <a href="https://www.facebook.com/espaciorecoletaif">
               <i class="fab fa-facebook" id="facebook"></i>
             </a>
@@ -98,17 +102,48 @@
           </span>
         </div>
       </div>
-      <!-- fin de barra superior -->
     </header>
 
+    <!-- Logo y título de pantalla data -->
     <div class="row">
-        <div class="col-md-12" id="titles2">
+        <div class="col-sm-12" id="titles2">
           <h1>
-            <img src="../img/logoifpequeño.png" id="logoInicio" alt="logoif"> Informacion sobre registro de visitas</h1>
-          <p>Aquí podras ver todos los datos ingresados</p>
+            <img src="../img/logoifpequeño.png" id="logoInicio" alt="logoif"> Información sobre registro de visitas</h1>
+          <p>Aquí podras ver toda la información ingresada de cada visita</p>
         </div>
       </div>
-  </div>
+
+      <!-- Menú con opciones para ver -->
+       <!-- 5° row, Ciudades-->
+       <ul class="nav nav-tabs">
+          <li class="col-sm nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+              Datos de visitas</a>
+            
+          </li>
+          <li class="col-sm nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+              Empresas participantes</a>
+            
+          </li>
+          <li class="col-sm nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+              Horarios IF</a>
+            
+          </li>
+          <li class="col-sm nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+              Políticas del IF</a>
+          </li>
+        </ul>
+
+        <div class="row backgroundWeb">
+          dsa
+        </div>
+
+
+
+  </div> <!-- fin de container -->
 
 
   <!-- Firebase -->

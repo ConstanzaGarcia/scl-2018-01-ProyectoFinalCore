@@ -35,7 +35,7 @@ width: 7%;
 }
 
 #datos{
-  margin-top: 5%;
+  margin-top: 2%;
   background-image: url(../../img/fondocopia.png);
   background-size: 100%;
   color: #E5E5E5;
@@ -44,7 +44,7 @@ width: 7%;
 }
 .form-control-sm{
 font-family: 'Roboto', sans-serif;
-margin-bottom: 1%;
+margin-bottom: 0.2%;
 }
 
 
@@ -78,4 +78,30 @@ margin-bottom: 1%;
   color: #E5E5E5;
   text-align: center;
   padding: 3%;
+}
+
+#btnEnter{
+  margin-top: 5%;
+  background: #222222;
+  color: #E5E5E5;
+}
+#btnEnter:hover{
+  margin-top: 5%;
+  background: #222222;
+  color: tan;
+}
+.nav-link{
+  background-color: #E5E5E5;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+.nav-link:hover{
+  background-color:#222222;
+  color: white;
+}
+
+.backgroundWeb{
+  background-image: url(../../img/if.png);
+  height: 50vw;
 }
