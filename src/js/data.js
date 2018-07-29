@@ -17,7 +17,7 @@ firebase.database().ref('visitas')
     <td>${newMessage.val().names}</td>
     <td>${newMessage.val().ruts}</td>
     <td>${newMessage.val().patentes} </td>
-    <td> </td>
+    <td>${visitTime.getDate()}/${visitTime.getMonth()}/${visitTime.getFullYear()} - ${visitTime.getHour()}:${visitTime.getMinutes()} </td>
     <td> </td>
     </tr> 
           `+ invitadosContainer.innerHTML;
@@ -44,6 +44,7 @@ function sendMessage() {
     names: name,
     ruts: rut,
     patentes: patente,
+    visitTime: Date.now()
   });
   inputName.value ='';
   inputRut.value ='';
