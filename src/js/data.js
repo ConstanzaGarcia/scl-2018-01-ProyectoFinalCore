@@ -73,9 +73,7 @@ fetch('../data/local.json')
   
   const renderInfo = (local) => {
     containerLocal.innerHTML = `
-    <select>
     <option>${local.name}(${local.empresa})</option>
-    </select> 
           `+ containerLocal.innerHTML;
   }
 
