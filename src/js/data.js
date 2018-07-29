@@ -54,28 +54,51 @@ function sendMessage() {
 }    
 }         
 
-
-
 //FETCH 
 //Llamando a local.json, donde se encuentran las personas pertenecientes al IF
-fetch('../data/local.json')
-  .then(response => response.json())
-  .then(localJSON => {
-    local = localJSON;
-    console.log(local);
-  })
-  .catch(error => {
-    console.error("No pudimos obtener usuarios");
-    console.error("ERROR > " + error.stack); // imprime donde esta el error
-  });
-  
+let optionsMenu = document.getElementById('optionsContainer');
+optionsMenu.length = 0;
 
-  
-  const renderInfo = (local) => {
-    containerLocal.innerHTML = `
-    <option>${local.name}(${local.empresa})</option>
-          `+ containerLocal.innerHTML;
-  }
+let options = document.createElement('option');
+options.text = '¿A quién visitas?';
+
+optionsMenu.add(options);
+optionsMenu.selectedIndex = '';
+
+const dataJson = '../data/local.json';
+
+fetch(dataJson)
+  .then(
+    function(response)
+    {
+      if (response.status !== 200)
+      {
+        console.error('Error: no se puede cargar la información' +
+          response.status);
+        return;
+      }
+
+      //Revisa la información con "response" 
+      response.json().then(function(data)
+      {
+        let option;
+
+        for (let i = 0; i < data.length; i++)
+        {
+          option = document.createElement('option');
+          option.text = `
+          ${data[i].name} (${data[i].Empresa})
+          `;
+
+          optionsMenu.add(option);
+        }
+      });
+    }
+  )
+  .catch(function(err)
+  {
+    console.error('Fetch Error -', err);
+  });
 
 
   //Funcion para sacar foto
