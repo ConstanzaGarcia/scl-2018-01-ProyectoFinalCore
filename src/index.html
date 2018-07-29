@@ -33,11 +33,14 @@
     </header>
 
     <section id="datos">
-      <div class="col-md-6 offset-md-3">
+      <div class="col-md-4 offset-md-4">
+        <button id="startbutton"> Tomar foto </button>
+      </div>
+      <div class="col-md-4 offset-md-4">
         <video id="video"></video>
-        <button id="startbutton">Tomar foto</button>
+      </div>
+      <div class="col-md-4 offset-md-4">
         <canvas id="canvas"></canvas>
-        <img src="http://placekitten.com/g/320/261" id="photo" alt="photo">
       </div>
       <div class="row">
         <div class="col-md-6 offset-md-3">
@@ -56,27 +59,25 @@
           <select class="custom-select" size="3">
             <option selected>
               <strong>¿A quien visitas?</strong>
-              <div class="containerLocal">
-
-                </div>
-            </option>
-           
-          </select>
+              <option value="" class="containerLocal">
         </div>
+        </option>
+        </select>
       </div>
+  </div>
 
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <button type="button" id="btnEnviarDatos" onclick="sendMessage()" class="btn btn-secondary btn-lg btn-block">Ingresar visita</button>
-        </div>
-      </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <button type="button" id="btnEnviarDatos" onclick="sendMessage()" class="btn btn-secondary btn-lg btn-block">Ingresar visita</button>
+    </div>
+  </div>
 
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <button type="button" id="btnEnter" class="btn btn-secondary btn-lg btn-block">Ver datos y registros</button>
-        </div>
-      </div>
-    </section>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <button type="button" id="btnEnter" class="btn btn-secondary btn-lg btn-block">Ver datos y registros</button>
+    </div>
+  </div>
+  </section>
   </div>
 
   <!-- INICIO PANTALLA DATA -->
