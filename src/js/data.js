@@ -12,12 +12,13 @@ firebase.database().ref('visitas')
 firebase.database().ref('visitas')
   .limitToLast(50) 
   .on('child_added', (newMessage) => {
+    const time = new Date(newMessage.val().time);
     invitadosContainer.innerHTML = `
     <tr>
     <td>${newMessage.val().names}</td>
     <td>${newMessage.val().ruts}</td>
     <td>${newMessage.val().patentes} </td>
-    <td> </td>
+    <td>${time.getHours()}:${time.getMinutes()} del día ${time.getDate()}/${time.getMonth() + 1}/${time.getFullYear()}</td>
     <td> </td>
     </tr> 
           `+ invitadosContainer.innerHTML;
@@ -44,6 +45,7 @@ function sendMessage() {
     names: name,
     ruts: rut,
     patentes: patente,
+    time: Date.now(),
   });
   inputName.value ='';
   inputRut.value ='';
@@ -52,9 +54,10 @@ function sendMessage() {
 }    
 }         
 
+
+/*
 //FETCH 
 //Llamando a local.json, donde se encuentran las personas pertenecientes al IF
-
 fetch('../data/local.json')
   .then(response => response.json())
   .then(localJSON => {
@@ -65,6 +68,7 @@ fetch('../data/local.json')
     console.error("No pudimos obtener usuarios");
     console.error("ERROR > " + error.stack); // imprime donde esta el error
   });
+  */
 
 
   /*
