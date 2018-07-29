@@ -9,10 +9,8 @@ firebase.database().ref('visitas')
 
   });
 
-
-//Llamando a los mensajes  para que aparezcan cada vez que recargue la pagina
 firebase.database().ref('visitas')
-  .limitToLast(50) //muestra solo los ultimos 5 mensajes como historial al recargar la pagina
+  .limitToLast(50) 
   .on('child_added', (newMessage) => {
     invitadosContainer.innerHTML = `
     <tr>
@@ -27,7 +25,7 @@ firebase.database().ref('visitas')
 
 
 // Firebase Database
-// Guardar los mensajes en database, llamada messages
+// Guarda  ela info en database, llamada visitas
 function sendMessage() {
   if (inputName.value.length === 0 || null && inputRut.value.length === 0 || null) {
     alert('Debes ingresar todos los datos solicitados')
@@ -38,7 +36,7 @@ function sendMessage() {
   const patente = inputPatente.value;
   
 
-  //Para tener una nueva llave en la colección messages
+  //Para tener una nueva llave en la colección visitas
   const newMessageKey = firebase.database().ref().child('visitas').push().key;
 
 
@@ -47,10 +45,40 @@ function sendMessage() {
     ruts: rut,
     patentes: patente,
   });
-  name.value = '';
-  rut.value = '';
-  patente.value = '';
+  inputName.value ='';
+  inputRut.value ='';
+  inputPatente.value ='';
   alert('Datos ingresados correctamente, y notificación enviada con éxito');
 }    
 }         
+
+//FETCH 
+//Llamando a local.json, donde se encuentran las personas pertenecientes al IF
+
+fetch('../data/local.json')
+  .then(response => response.json())
+  .then(localJSON => {
+    local = localJSON;
+    console.log(local);
+  })
+  .catch(error => {
+    console.error("No pudimos obtener usuarios");
+    console.error("ERROR > " + error.stack); // imprime donde esta el error
+  });
+
+
+  /*
+  const renderInfo = (local) => {
+    containerLocal.innerHTML = `
+    <select>
+    <option>${local.name}(${local.empresa})</option>
+    </select> 
+          `+ containerLocal.innerHTML;
+  }
+*/
+
+
+
+
+
 
