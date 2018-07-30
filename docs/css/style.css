@@ -36,7 +36,7 @@ width: 7%;
 
 #datos{
   margin-top: 2%;
-  background-image: url(../../img/fondocopia.png);
+  background-image: url(docs/img/fondocopia.png);
   background-size: 100%;
   background-repeat: no-repeat;
   color: #E5E5E5;
@@ -110,7 +110,7 @@ margin-bottom: 0.2%;
 }
 
 .backgroundWeb{
-  background-image: url(../../img/if.png);
+  background-image: url(img/if.png);
   width: 100vw;
   height: 50vw;
 }
