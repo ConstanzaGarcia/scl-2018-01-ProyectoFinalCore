@@ -34,9 +34,36 @@ width: 7%;
   text-align: center;
 }
 
+/*EVENTOS DE FOTO*/
+#canvas{
+  display: none;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 1em; 
+  float: initial;
+}
+
+#video{
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 1em; 
+ 
+}
+#startbutton{
+  background-color: #222222;
+  color: #E5E5E5;
+  border: #E5E5E5 2 px solid;
+  border-radius: 4px;
+  padding: 0;
+  margin-bottom: 2em;
+}
+.fa-check-circle{
+  font-size: 1.5em;
+}
+
 #datos{
   margin-top: 2%;
-  background-image: url(img/fondocopia.png);
+  background-image: url(../../img/fondocopia.png);
   background-size: 100%;
   background-repeat: no-repeat;
   color: #E5E5E5;
@@ -44,10 +71,26 @@ width: 7%;
   padding: 3%;
 }
 .form-control-sm{
-font-family: 'Roboto', sans-serif;
-margin-bottom: 0.2%;
+  height: 1.8em;  
 }
-
+#inputName{
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0.8em;
+  font-size: 1.4em;
+}
+#inputRut{
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0.8em;
+  font-size: 1.4em;
+}
+#inputPatente{
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0.8em;
+  font-size: 1.4em;
+}
+#optionsContainer{
+  font-size: 1.4em;
+}
 
 /*PANTALLA DE DATA*/
 
@@ -88,6 +131,14 @@ margin-bottom: 0.2%;
   margin-top: 5%;
   background: #222222;
   color: #E5E5E5;
+  border: #222222;
+  float: left;
+  font-size: 1.5em;
+}
+
+.fa-file-alt{
+ color: #E5E5E5;
+ font-size: 2em;
 }
 #btnEnter:hover{
   margin-top: 5%;
@@ -110,10 +161,12 @@ margin-bottom: 0.2%;
 }
 
 .backgroundWeb{
-  background-image: url(img/if.png);
+  background-image: url(../../img/if.png);
   width: 100vw;
   height: 50vw;
 }
+
+/*tabla de visitas*/
 
 #listaInvitados{
   display: none;
@@ -160,26 +213,8 @@ text-align: center;
   cursor: pointer;
 }
 
-/*EVENTOS DE FOTO*/
-#canvas{
-  display: none;
-  border-radius: 50px;
-  text-align: center;
-  margin-bottom: 1em; 
-  float: initial;
-}
+/*Tabla de empresas y personas*/
 
-#video{
-  border-radius: 50px;
-  text-align: center;
-  margin-bottom: 1em; 
- 
-}
-#startbutton{
-  background-color: #222222;
-  color: #E5E5E5;
-  border: #E5E5E5 2 px solid;
-  border-radius: 4px;
-  padding: 0;
-  margin-bottom: 2em;
+#listaEmpresas{
+  display: none;
 }

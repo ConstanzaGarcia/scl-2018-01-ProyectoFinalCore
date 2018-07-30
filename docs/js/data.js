@@ -65,7 +65,7 @@ options.text = '¿A quién visitas?';
 optionsMenu.add(options);
 optionsMenu.selectedIndex = '';
 
-const dataJson = 'data/local.json';
+const dataJson = '../data/local.json';
 
 fetch(dataJson)
   .then(
