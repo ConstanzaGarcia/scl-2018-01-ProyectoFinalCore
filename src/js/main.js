@@ -28,11 +28,21 @@ document.getElementById('startbutton').addEventListener('click', () => {
 });
 
 
-//Filtro para tabla
+//Filtro para tabla de visitas
 $(document).ready(function () {
   $('#searchBox').on('keyup', function () {
     var value = $(this).val().toLowerCase();
     $('#invitadosContainer tr').filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+//Filtro para tabla de personas y empresas
+$(document).ready(function () {
+  $('#searchBox2').on('keyup', function () {
+    var value = $(this).val().toLowerCase();
+    $('#empresasContainer tr').filter(function () {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
