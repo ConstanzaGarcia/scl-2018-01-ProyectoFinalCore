@@ -23,18 +23,19 @@
   <!-- INICIO PANTALLA REGISTRO -->
   <div class="container-fluid" id="register">
     <header id="bienvenido">
-      <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
           <h1 id="title">
             <img src="../img/logoifpequeño.png" id="logoInicio" alt="logoif"> Bienvenido a IF Blanco Recoleta </h1>
           <p>Ingresa tus datos para comenzar tu visita</p>
         </div>
-      </div>
+      
     </header>
 
     <section id="datos">
       <div class="col-md-4 offset-md-4">
-        <button id="startbutton"> Tomar foto <i class="fas fa-camera"></i></button>
+        <button id="startbutton"> Tomar foto
+          <i class="fas fa-camera"></i>
+        </button>
       </div>
       <div class="col-md-4 offset-md-4">
         <video id="video"></video>
@@ -62,18 +63,21 @@
         </div>
       </div>
 
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <button type="button" id="btnEnviarDatos" onclick="sendMessage()" class="btn btn-secondary btn-lg btn-block">Registrar visita <i class="far fa-check-circle"></i></button>
-    </div>
-  </div>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <button type="button" id="btnEnviarDatos" onclick="sendMessage()" class="btn btn-secondary btn-lg btn-block">Registrar visita
+            <i class="far fa-check-circle"></i>
+          </button>
+        </div>
+      </div>
 
-  <div class="row">
-    <div class="col-12">
-      <button type="button" id="btnEnter"> <i class="fas fa-file-alt"></i>  Libro de visitas y datos</button>
-    </div>
-  </div>
-  </section>
+      <div class="row">
+        <div class="col-12">
+          <button type="button" id="btnEnter">
+            <i class="fas fa-file-alt"></i> Libro de visitas y datos</button>
+        </div>
+      </div>
+    </section>
   </div>
 
   <!-- INICIO PANTALLA DATA -->
@@ -118,17 +122,17 @@
 
       </li>
       <li class="col-sm nav-item dropdown">
-        <a class="nav-link" id="btnInfoEmpresas"  data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" id="btnInfoEmpresas" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
           Personas y Empresas</a>
 
       </li>
       <li class="col-sm nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" id="btnAnalisis" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
           Análisis de datos</a>
 
       </li>
       <li class="col-sm nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" id="btnPoliticas" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
           Políticas del IF</a>
       </li>
     </ul>
@@ -136,14 +140,15 @@
     <!-- Seccion de fondo con imagen y datos -->
     <div class="row backgroundWeb">
 
+      <!-- Registro de visitas ordenado en tabla, con input de busqueda -->
       <div class="col-12" id="listaInvitados">
-        <!-- inicio busqueda por nombre -->
+        
         <a class="navbar-brand"></a>
         <form class="form-inline">
           <input class="form-control mr-sm-2" id="searchBox" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por dato..."
             aria-label="Search">
           <i class="fas fa-search"></i>
-        </input>
+          </input>
         </form>
 
         <table class="table table-bordered">
@@ -161,21 +166,46 @@
         </table>
       </div>
 
-       <!-- Listado de personas y empresas -->
+      <!-- Registro de personas y empresas, con input de busqueda -->
       <div class="col-sm-12" id="listaEmpresas">
-        
+
         <a class="navbar-brand"></a>
         <form class="form-inline">
           <input class="form-control mr-sm-2" id="searchBox2" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por dato..."
             aria-label="Search">
           <i class="fas fa-search"></i>
-        </input>
+          </input>
         </form>
 
-
+        <table class="table table-bordered">
+          <thead>
+            <tr id="empresasItem">
+              <th scope="col">Nombre</th>
+              <th scope="col">Mail</th>
+              <th scope="col">Empresa</th>
+            </tr>
+          </thead>
+          <tbody id="empresasContainer">
+          </tbody>
+        </table>
       </div>
 
-    </div> <!-- fin de espacio para tablas -->
+      <!-- Análisis de datos -->
+      <div class="col-md-6 offset-md-3" id="analisis">
+        <p id="promedio">Promedio de visitas diarias:</p>
+        <p>Horario punta de ingreso de visitas:</p>
+        <p>Promedio de autos por día:</p>
+      </div>
+
+      <!-- Politicas del IF -->
+      <div class="col-md-6 offset-md-3" id="politicas">
+        <p id="primerp"> - A cada visita se le debe pedir su nombre, rut, patente (en caso de que estacione en IF) e indicar a quien visita.</p>
+        <p> - Al llegar una visita, se le debe notificar obligatoriamente a la persona que lo espera.</p>
+        <p> - A las personas que asisten diariamente al IF, deben llevar durante toda su estadía la Credencial otorgada por su Empresa.</p>
+ 
+      </div>
+    </div>
+    <!-- fin de espacio con informacion de pestañas-->
 
 
 
