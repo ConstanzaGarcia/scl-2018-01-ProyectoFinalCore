@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- link icono -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <title>Registro de visitas IF</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="../img/logoif.png">
+
+</head>
+
+<body>
+
+  <!-- INICIO PANTALLA REGISTRO -->
+  <div class="container-fluid" id="register">
+    <header id="bienvenido">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 id="title">
+            <img src="../img/logoifpequeño.png" id="logoInicio" alt="logoif"> Bienvenido a IF Blanco Recoleta </h1>
+          <p>Ingresa tus datos para comenzar tu visita</p>
+        </div>
+      </div>
+    </header>
+
+    <section id="datos">
+      <div class="col-md-4 offset-md-4">
+        <button id="startbutton"> Tomar foto <i class="fas fa-camera"></i></button>
+      </div>
+      <div class="col-md-4 offset-md-4">
+        <video id="video"></video>
+      </div>
+      <div class="col-md-4 offset-md-4">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <form>
+            <div class="form-group">
+              <input class="form-control form-control-sm" type="text" id="inputName" placeholder="Nombre y apellido">
+              <input class="form-control form-control-sm" type="text" id="inputRut" placeholder="Rut">
+              <input class="form-control form-control-sm" type="text" id="inputPatente" placeholder="Patente (Sólo si estacionó en IF)">
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <select class="custom-select" id="optionsContainer" size="3">
+            <option selected>
+          </select>
+        </div>
+      </div>
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <button type="button" id="btnEnviarDatos" onclick="sendMessage()" class="btn btn-secondary btn-lg btn-block">Ingresar visita</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <button type="button" id="btnEnter" class="btn btn-secondary btn-lg btn-block">Ver datos y registros</button>
+    </div>
+  </div>
+  </section>
+  </div>
+
+  <!-- INICIO PANTALLA DATA -->
+  <div class="container-fluid" id="pantallaData">
+
+    <!-- Inicio barra negra superior -->
+    <header>
+      <div class="row topBar">
+        <div class="col-12">
+          <span>
+            <a href="https://www.facebook.com/espaciorecoletaif">
+              <i class="fab fa-facebook" id="facebook"></i>
+            </a>
+            <a href="http://www.ifblanco.cl/">
+              <i class="fas fa-home" id="web"></i>
+            </a>
+            <a href="https://www.instagram.com/if_blanco/">
+              <i class="fab fa-instagram" id="instagram"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Logo y título de pantalla data -->
+    <div class="row titleWhite">
+      <div class="col-sm-12" id="titles2">
+        <h1>
+          <img src="../img/logoifpequeñoblack.png" id="logoInicio" alt="logoif"> Información sobre registro de visitas</h1>
+        <p>Aquí podras ver toda la información ingresada de cada visita</p>
+        <button id="newVisit">
+          <i class="fas fa-arrow-alt-circle-left"></i> Volver a pantalla de ingreso </button>
+      </div>
+    </div>
+
+    <!-- Menú con opciones para ver -->
+    <!-- 5° row, Ciudades-->
+    <ul class="nav nav-tabs">
+      <li class="col-sm nav-item dropdown">
+        <a class="nav-link" id="btnInfo" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+          Datos de visitas</a>
+
+      </li>
+      <li class="col-sm nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+          Personas y Empresas</a>
+
+      </li>
+      <li class="col-sm nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+          Análisis de datos</a>
+
+      </li>
+      <li class="col-sm nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+          Políticas del IF</a>
+      </li>
+    </ul>
+
+    <!-- Seccion de fondo con imagen y datos -->
+    <div class="row backgroundWeb">
+
+      <div class="col-12" id="listaInvitados">
+        <!-- inicio busqueda por nombre -->
+        <a class="navbar-brand"></a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" id="searchBox" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por nombre..."
+            aria-label="Search">
+          <i class="fas fa-search"></i>
+          </button>
+        </form>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr id="namesItem">
+              <th scope="col">Nombre</th>
+              <th scope="col">Rut</th>
+              <th scope="col">Patente</th>
+              <th scope="col">Hora de entrada</th>
+              <th scope="col">Visitó a:</th>
+            </tr>
+          </thead>
+          <tbody id="invitadosContainer">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <!-- fin de container -->
+
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCDcvB6QR1hfTTs9ue-9tZiH4Vo6Lx1iW8",
+      authDomain: "registro-visitas-if.firebaseapp.com",
+      databaseURL: "https://registro-visitas-if.firebaseio.com",
+      projectId: "registro-visitas-if",
+      storageBucket: "",
+      messagingSenderId: "280711345677"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <!-- javascript local -->
+  <script src="js/main.js"></script>
+  <script src="js/data.js"></script>
+
+</body>
+
+</html>
