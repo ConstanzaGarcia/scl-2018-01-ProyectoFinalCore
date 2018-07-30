@@ -118,7 +118,7 @@
 
       </li>
       <li class="col-sm nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" id="btnInfoEmpresas"  data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
           Personas y Empresas</a>
 
       </li>
@@ -159,6 +159,18 @@
           <tbody id="invitadosContainer">
           </tbody>
         </table>
+      </div>
+
+       <!-- Listado de personas y empresas -->
+      <div class="col-sm-12" id="listaEmpresas">
+        
+        <a class="navbar-brand"></a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" id="searchBox2" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por dato..."
+            aria-label="Search">
+          <i class="fas fa-search"></i>
+          </button>
+        </form>
       </div>
     </div>
 

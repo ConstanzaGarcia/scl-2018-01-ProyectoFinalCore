@@ -34,6 +34,30 @@ width: 7%;
   text-align: center;
 }
 
+/*EVENTOS DE FOTO*/
+#canvas{
+  display: none;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 1em; 
+  float: initial;
+}
+
+#video{
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 1em; 
+ 
+}
+#startbutton{
+  background-color: #222222;
+  color: #E5E5E5;
+  border: #E5E5E5 2 px solid;
+  border-radius: 4px;
+  padding: 0;
+  margin-bottom: 2em;
+}
+
 #datos{
   margin-top: 2%;
   background-image: url(../../img/fondocopia.png);
@@ -115,6 +139,8 @@ margin-bottom: 0.2%;
   height: 50vw;
 }
 
+/*tabla de visitas*/
+
 #listaInvitados{
   display: none;
 }
@@ -160,26 +186,8 @@ text-align: center;
   cursor: pointer;
 }
 
-/*EVENTOS DE FOTO*/
-#canvas{
-  display: none;
-  border-radius: 50px;
-  text-align: center;
-  margin-bottom: 1em; 
-  float: initial;
-}
+/*Tabla de empresas y personas*/
 
-#video{
-  border-radius: 50px;
-  text-align: center;
-  margin-bottom: 1em; 
- 
-}
-#startbutton{
-  background-color: #222222;
-  color: #E5E5E5;
-  border: #E5E5E5 2 px solid;
-  border-radius: 4px;
-  padding: 0;
-  margin-bottom: 2em;
+#listaEmpresas{
+  display: none;
 }
