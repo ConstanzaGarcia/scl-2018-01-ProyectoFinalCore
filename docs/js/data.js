@@ -19,7 +19,7 @@ firebase.database().ref('visitas')
     <td>${newMessage.val().ruts}</td>
     <td>${newMessage.val().patentes} </td>
     <td>${time.getHours()}:${time.getMinutes()} del día ${time.getDate()}/${time.getMonth() + 1}/${time.getFullYear()}</td>
-    <td> </td>
+    <td>${newMessage.val().img} </td>
     </tr> 
           `+ invitadosContainer.innerHTML;
   });
@@ -37,6 +37,8 @@ function sendMessage() {
   const patente = inputPatente.value;
   
 
+  
+
   //Para tener una nueva llave en la colección visitas
   const newMessageKey = firebase.database().ref().child('visitas').push().key;
 
@@ -46,6 +48,7 @@ function sendMessage() {
     ruts: rut,
     patentes: patente,
     time: Date.now(),
+    
   });
   inputName.value ='';
   inputRut.value ='';
