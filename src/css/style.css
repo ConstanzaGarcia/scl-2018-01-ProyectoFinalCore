@@ -34,21 +34,6 @@ width: 7%;
   text-align: center;
 }
 
-/*EVENTOS DE FOTO*/
-#canvas{
-  display: none;
-  border-radius: 50px;
-  text-align: center;
-  margin-bottom: 1em; 
-  float: initial;
-}
-
-#video{
-  border-radius: 50px;
-  text-align: center;
-  margin-bottom: 1em; 
- 
-}
 #startbutton{
   background-color: #222222;
   color: #E5E5E5;
@@ -88,8 +73,28 @@ width: 7%;
   margin-bottom: 0.8em;
   font-size: 1.4em;
 }
+#btnEnviarDatos{
+  margin-top: 1em;
+}
 #optionsContainer{
   font-size: 1.4em;
+}
+
+
+/*EVENTOS DE FOTO*/
+#canvas{
+  display: none;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 1em; 
+  float: initial;
+}
+
+#video{
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 1em; 
+ 
 }
 
 /*PANTALLA DE DATA*/
@@ -248,4 +253,35 @@ text-align: center;
   width: 70%;
   margin-left: 5%;
   text-align: center;
+}
+
+/*ANALISIS DE DATOS*/
+
+#analisis{
+  display: none;
+  margin-top: 2em;
+  background-color: gray;
+  border-radius: 7px;
+  height: 30vw;
+  color: white;
+  text-align: center;
+}
+
+#promedio{
+  margin-top: 2em;
+}
+
+/*POLITICAS DEL IF*/
+#politicas{
+  display: none;
+  margin-top: 2em;
+  background-color: gray;
+  border-radius: 7px;
+  height: 30vw;
+  color: white;
+  text-align: center;
+}
+
+#primerp{
+  margin-top: 2em;
 }

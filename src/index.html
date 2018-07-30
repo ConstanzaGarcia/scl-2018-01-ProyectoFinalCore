@@ -23,13 +23,12 @@
   <!-- INICIO PANTALLA REGISTRO -->
   <div class="container-fluid" id="register">
     <header id="bienvenido">
-      <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
           <h1 id="title">
             <img src="../img/logoifpequeño.png" id="logoInicio" alt="logoif"> Bienvenido a IF Blanco Recoleta </h1>
           <p>Ingresa tus datos para comenzar tu visita</p>
         </div>
-      </div>
+      
     </header>
 
     <section id="datos">
@@ -128,12 +127,12 @@
 
       </li>
       <li class="col-sm nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" id="btnAnalisis" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
           Análisis de datos</a>
 
       </li>
       <li class="col-sm nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" id="btnPoliticas" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
           Políticas del IF</a>
       </li>
     </ul>
@@ -141,8 +140,9 @@
     <!-- Seccion de fondo con imagen y datos -->
     <div class="row backgroundWeb">
 
+      <!-- Registro de visitas ordenado en tabla, con input de busqueda -->
       <div class="col-12" id="listaInvitados">
-        <!-- inicio busqueda por nombre -->
+        
         <a class="navbar-brand"></a>
         <form class="form-inline">
           <input class="form-control mr-sm-2" id="searchBox" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por dato..."
@@ -166,7 +166,7 @@
         </table>
       </div>
 
-      <!-- Listado de personas y empresas -->
+      <!-- Registro de personas y empresas, con input de busqueda -->
       <div class="col-sm-12" id="listaEmpresas">
 
         <a class="navbar-brand"></a>
@@ -188,11 +188,24 @@
           <tbody id="empresasContainer">
           </tbody>
         </table>
-
       </div>
 
+      <!-- Análisis de datos -->
+      <div class="col-md-6 offset-md-3" id="analisis">
+        <p id="promedio">Promedio de visitas diarias:</p>
+        <p>Horario punta de ingreso de visitas:</p>
+        <p>Promedio de autos por día:</p>
+      </div>
+
+      <!-- Politicas del IF -->
+      <div class="col-md-6 offset-md-3" id="politicas">
+        <p id="primerp"> - A cada visita se le debe pedir su nombre, rut, patente (en caso de que estacione en IF) e indicar a quien visita.</p>
+        <p> - Al llegar una visita, se le debe notificar obligatoriamente a la persona que lo espera.</p>
+        <p> - A las personas que asisten diariamente al IF, deben llevar durante toda su estadía la Credencial otorgada por su Empresa.</p>
+ 
+      </div>
     </div>
-    <!-- fin de espacio para tablas -->
+    <!-- fin de espacio con informacion de pestañas-->
 
 
 

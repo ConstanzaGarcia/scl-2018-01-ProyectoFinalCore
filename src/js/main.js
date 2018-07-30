@@ -4,21 +4,43 @@ document.getElementById('btnEnter').addEventListener('click', () => {
   document.getElementById('pantallaData').style.display = 'block';
 }
 );
-//Evento para abrir la pestaña de información de visitas
-document.getElementById('btnInfo').addEventListener('click', () => {
-  document.getElementById('listaInvitados').style.display = 'block';
-});
-
 //Evento de boton para regresar a pantalla de registro
 document.getElementById('newVisit').addEventListener('click', () => {
   document.getElementById('register').style.display = 'block';
   document.getElementById('pantallaData').style.display = 'none';
 });
 
+//Evento para abrir la pestaña de información de visitas
+document.getElementById('btnInfo').addEventListener('click', () => {
+  document.getElementById('listaInvitados').style.display = 'block';
+  document.getElementById('listaEmpresas').style.display = 'none';
+  document.getElementById('analisis').style.display = 'none';
+  document.getElementById('politicas').style.display = 'none';
+});
+
 //Evento para abrir la pestaña de informacion de personas y empresas
 document.getElementById('btnInfoEmpresas').addEventListener('click', () => {
   document.getElementById('listaInvitados').style.display = 'none';
   document.getElementById('listaEmpresas').style.display = 'block';
+  document.getElementById('analisis').style.display = 'none';
+  document.getElementById('politicas').style.display = 'none';
+});
+
+//Evento para abrir la pestaña de informacion de personas y empresas
+document.getElementById('btnAnalisis').addEventListener('click', () => {
+  document.getElementById('listaInvitados').style.display = 'none';
+  document.getElementById('listaEmpresas').style.display = 'none';
+  document.getElementById('analisis').style.display = 'block';
+  document.getElementById('politicas').style.display = 'none';
+});
+
+//Evento para abrir la pestaña de informacion de personas y empresas
+document.getElementById('btnPoliticas').addEventListener('click', () => {
+  document.getElementById('listaInvitados').style.display = 'none';
+  document.getElementById('listaEmpresas').style.display = 'none';
+  document.getElementById('analisis').style.display = 'none';
+  document.getElementById('politicas').style.display = 'block';
+
 });
 
 //evento para que al tomar foto, se borre el video, y la foto se imprima en la misma ubicación
