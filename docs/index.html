@@ -14,7 +14,7 @@
     crossorigin="anonymous">
   <title>Registro de visitas IF</title>
 
-  <link rel="shortcut icon" type="image/x-icon" href="../img/logoif.png">
+  <link rel="shortcut icon" type="image/x-icon" href="img/logoifpequeño.png">
 
 </head>
 
@@ -26,7 +26,7 @@
       <div class="row">
         <div class="col-sm-12">
           <h1 id="title">
-            <img src="../img/logoifpequeño.png" id="logoInicio" alt="logoif"> Bienvenido a IF Blanco Recoleta </h1>
+            <img src="img/logoifpequeño.png" id="logoInicio" alt="logoif"> Bienvenido a IF Blanco Recoleta </h1>
           <p>Ingresa tus datos para comenzar tu visita</p>
         </div>
       </div>
@@ -56,7 +56,7 @@
 
       <div class="row">
         <div class="col-md-6 offset-md-3">
-          <select class="custom-select" id="optionsContainer" size="4">
+          <select class="custom-select" id="optionsContainer" size="3">
             <option selected>
           </select>
         </div>
@@ -64,13 +64,13 @@
 
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <button type="button" id="btnEnviarDatos" onclick="sendMessage()" class="btn btn-secondary btn-lg btn-block">Registrar visita <i class="far fa-check-circle"></i></button>
+      <button type="button" id="btnEnviarDatos" onclick="sendMessage()" class="btn btn-secondary btn-lg btn-block">Ingresar visita</button>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-12">
-      <button type="button" id="btnEnter"> <i class="fas fa-file-alt"></i>  Libro de visitas y datos</button>
+    <div class="col-md-6 offset-md-3">
+      <button type="button" id="btnEnter" class="btn btn-secondary btn-lg btn-block">Ver datos y registros</button>
     </div>
   </div>
   </section>
@@ -102,7 +102,7 @@
     <div class="row titleWhite">
       <div class="col-sm-12" id="titles2">
         <h1>
-          <img src="../img/logoifpequeñoblack.png" id="logoInicio" alt="logoif"> Información sobre registro de visitas</h1>
+          <img src="img/logoifpequeñoblack.png" id="logoInicio" alt="logoif"> Información sobre registro de visitas</h1>
         <p>Aquí podras ver toda la información ingresada de cada visita</p>
         <button id="newVisit">
           <i class="fas fa-arrow-alt-circle-left"></i> Volver a pantalla de ingreso </button>
@@ -118,7 +118,7 @@
 
       </li>
       <li class="col-sm nav-item dropdown">
-        <a class="nav-link" id="btnInfoEmpresas"  data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
           Personas y Empresas</a>
 
       </li>
@@ -140,10 +140,10 @@
         <!-- inicio busqueda por nombre -->
         <a class="navbar-brand"></a>
         <form class="form-inline">
-          <input class="form-control mr-sm-2" id="searchBox" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por dato..."
+          <input class="form-control mr-sm-2" id="searchBox" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por nombre..."
             aria-label="Search">
           <i class="fas fa-search"></i>
-        </input>
+          </button>
         </form>
 
         <table class="table table-bordered">
@@ -160,22 +160,7 @@
           </tbody>
         </table>
       </div>
-
-       <!-- Listado de personas y empresas -->
-      <div class="col-sm-12" id="listaEmpresas">
-        
-        <a class="navbar-brand"></a>
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" id="searchBox2" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por dato..."
-            aria-label="Search">
-          <i class="fas fa-search"></i>
-        </input>
-        </form>
-
-
-      </div>
-
-    </div> <!-- fin de espacio para tablas -->
+    </div>
 
 
 
@@ -208,7 +193,6 @@
   <!-- javascript local -->
   <script src="js/main.js"></script>
   <script src="js/data.js"></script>
-  <script src="js/photo.js"></script>
 
 </body>
 
