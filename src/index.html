@@ -56,7 +56,7 @@
 
       <div class="row">
         <div class="col-md-6 offset-md-3">
-          <select class="custom-select" id="optionsContainer" size="3">
+          <select class="custom-select" id="optionsContainer" size="4">
             <option selected>
           </select>
         </div>
@@ -64,13 +64,13 @@
 
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <button type="button" id="btnEnviarDatos" onclick="sendMessage()" class="btn btn-secondary btn-lg btn-block">Ingresar visita</button>
+      <button type="button" id="btnEnviarDatos" onclick="sendMessage()" class="btn btn-secondary btn-lg btn-block">Registrar visita <i class="far fa-check-circle"></i></button>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <button type="button" id="btnEnter" class="btn btn-secondary btn-lg btn-block">Ver datos y registros</button>
+    <div class="col-12">
+      <button type="button" id="btnEnter"> <i class="fas fa-file-alt"></i>  Libro de visitas y datos</button>
     </div>
   </div>
   </section>
@@ -143,7 +143,7 @@
           <input class="form-control mr-sm-2" id="searchBox" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por dato..."
             aria-label="Search">
           <i class="fas fa-search"></i>
-          </button>
+        </input>
         </form>
 
         <table class="table table-bordered">
@@ -169,10 +169,13 @@
           <input class="form-control mr-sm-2" id="searchBox2" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por dato..."
             aria-label="Search">
           <i class="fas fa-search"></i>
-          </button>
+        </input>
         </form>
+
+
       </div>
-    </div>
+
+    </div> <!-- fin de espacio para tablas -->
 
 
 

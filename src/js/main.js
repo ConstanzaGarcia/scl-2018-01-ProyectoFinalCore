@@ -21,7 +21,7 @@ document.getElementById('btnInfoEmpresas').addEventListener('click', () => {
   document.getElementById('listaEmpresas').style.display = 'block';
 });
 
-//evento para que al tomar foto, se borre el video, y la foto se imprima en la misma ubicacion
+//evento para que al tomar foto, se borre el video, y la foto se imprima en la misma ubicación
 document.getElementById('startbutton').addEventListener('click', () => {
   document.getElementById('video').style.display = 'none';
   document.getElementById('canvas').style.display = 'block';
