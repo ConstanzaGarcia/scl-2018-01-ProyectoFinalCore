@@ -1,37 +1,36 @@
-// var nodemailer = require('nodemailer');
-// var sgTransport = require('nodemailer-sendgrid-transport');
+const name = inputName.value;
 
-// // api key 
-// var options = {
-//   auth: {
-//     api_key: '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'
-//   }
-// }
 
-// // or
+Email.send("registrovisita@ifblanco.com",
+  "to@them.com",
+  "Nueva visita",
+  "Hola, tiene una nueva visita en la entrada de if Blanco, por favor, acérquese a recibirla.",
+  { token: "5f028f04-6e49-46d3-b7a7-3f40408db378" });
 
-// // usuario y contraseña
-// var option = {
-//   auth: {
-//     api_user: 'carolastra',
-//     api_key: 'carolo3030'
-//   }
-// }
-  
-// var mailer = nodemailer.createTransport(sgTransport(options));
+function saveContactForm(infoUsuarioIf) {
+  firebase
+    .database()
+    .ref('zonaIf')
+    .push(infoUsuarioIf) // Hacemos referencia el nombre del objeto que contendrá nuestros registros y empujamos los nuevos envios de datos
+    .then(function () {
+      //alert('Se ha enviado un aviso de su llegada'); // Si la petición es correcta y almaceno los datos mostramos un mensaje al usuario.
+      console.info(Email);
 
-// //Creando email
-// var email = {
-//   to: ['joe@foo.com', 'mike@bar.com'],
-//   from: 'roger@tacos.com',
-//   subject: 'Hi there',
-//   text: 'Awesome sauce',
-//   html: '<b>Awesome sauce</b>'
-// };
+      Email.send('registrovisita@ifblanco.com',
+        receiverEmail,
+        'Visitante',
+        'Hola, tiene un nuevo visitante, su nombre es:' + name,
+        {
+          token: '5f028f04-6e49-46d3-b7a7-3f40408db378'
+        });
 
-// mailer.sendMail(email, function(err, res) {
-//   if (err) { 
-//     console.log(err) 
-//   }
-//   console.log(res);
-// });
+      alert('Se ha enviado un aviso de su llegada'); 
+      alert('mensaje guardado'); 
+    })
+
+    .catch(function () {
+      alert('El email no pudo ser enviado.'); 
+
+    });
+
+}
