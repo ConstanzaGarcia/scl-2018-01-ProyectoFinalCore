@@ -1,3 +1,7 @@
+let takePhoto = document.getElementById('canvas');
+    let dataPhoto = takePhoto.toDataURL();
+    console.log(dataPhoto);
+
 //DATOS INGRESADOS QUE SE GUARDAN EN TABLA
 firebase.database().ref('visitas')
   .limitToLast(50) //filtro para no obtener todos los mensajes
@@ -19,7 +23,7 @@ firebase.database().ref('visitas')
     <td>${newMessage.val().ruts}</td>
     <td>${newMessage.val().patentes} </td>
     <td>${time.getHours()}:${time.getMinutes()} del día ${time.getDate()}/${time.getMonth() + 1}/${time.getFullYear()}</td>
-    <td> </td>
+    <td><img src="${dataPhoto}" alt="algo"></td>
     </tr> 
           `+ invitadosContainer.innerHTML;
   });
@@ -35,7 +39,7 @@ function sendMessage() {
     const name = inputName.value;
     const rut = inputRut.value;
     const patente = inputPatente.value;
-
+    
     //Para tener una nueva llave en la colección visitas
     const newMessageKey = firebase.database().ref().child('visitas').push().key;
 
@@ -44,7 +48,7 @@ function sendMessage() {
       ruts: rut,
       patentes: patente,
       time: Date.now(),
-
+      foto: dataPhoto
     });
     inputName.value = '';
     inputRut.value = '';
@@ -63,6 +67,7 @@ let options = document.createElement('option');
 options.text = '¿A quién visitas?';
 
 optionsMenu.add(options);
+
 optionsMenu.selectedIndex = '';
 
 const dataJson = '../data/local.json';
@@ -79,7 +84,7 @@ fetch(dataJson)
       //Revisa la información con "response" 
       response.json().then(function (data) {
         let option;
-        
+
         for (let i = 0; i < data.length; i++) {
           option = document.createElement('option');
           //option.classList.add('opcionVisita');
@@ -108,3 +113,18 @@ fetch(dataJson)
 
 
 
+
+
+//imprime a quien se visita en la tabla
+/*
+const select = document.getElementById('optionsContainer');
+select.addEventListener('change',
+  function () {
+    const selectOption = this.options[select.selectedIndex];
+    document.getElementById('visitNN').innerHTML = `
+<tr>
+<td></td>
+</tr> 
+      `+ document.getElementById('visitNN').innerHTML
+  }
+); */ 
