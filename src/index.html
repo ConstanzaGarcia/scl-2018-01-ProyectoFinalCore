@@ -12,9 +12,10 @@
   <!-- link icono -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/x-icon" href="../img/logoif.png">
   <title>Registro de visitas IF</title>
 
-  <link rel="shortcut icon" type="image/x-icon" href="../img/logoif.png">
+
 
 </head>
 
@@ -23,12 +24,12 @@
   <!-- INICIO PANTALLA REGISTRO -->
   <div class="container-fluid" id="register">
     <header id="bienvenido">
-        <div class="col-md-12">
-          <h1 id="title">
-            <img src="../img/logoifpequeño.png" id="logoInicio" alt="logoif"> Bienvenido a IF Blanco Recoleta </h1>
-          <p>Ingresa tus datos para comenzar tu visita</p>
-        </div>
-      
+      <div class="col-md-12">
+        <h1 id="title">
+          <img src="../img/logoifpequeño.png" id="logoInicio" alt="logoif"> Bienvenido a IF Blanco Recoleta </h1>
+        <p>Ingresa tus datos para comenzar tu visita</p>
+      </div>
+
     </header>
 
     <section id="datos">
@@ -48,7 +49,8 @@
           <form>
             <div class="form-group">
               <input class="form-control form-control-sm" type="text" id="inputName" placeholder="Nombre y apellido">
-              <input class="form-control form-control-sm" type="text" minlength="9" maxlength="10" oninput="validateRut(this)" id="inputRut" placeholder="Rut">
+              <input class="form-control form-control-sm" type="text" minlength="9" maxlength="10" oninput="validateRut(this)" id="inputRut"
+                placeholder="Rut">
               <input class="form-control form-control-sm" type="text" id="inputPatente" placeholder="Patente (Sólo si estacionó en IF)">
             </div>
           </form>
@@ -142,7 +144,7 @@
 
       <!-- Registro de visitas ordenado en tabla, con input de busqueda -->
       <div class="col-12" id="listaInvitados">
-        
+
         <a class="navbar-brand"></a>
         <form class="form-inline">
           <input class="form-control mr-sm-2" id="searchBox" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por dato..."
@@ -201,8 +203,9 @@
       <div class="col-md-6 offset-md-3" id="politicas">
         <p id="primerp"> - A cada visita se le debe pedir su nombre, rut, patente (en caso de que estacione en IF) e indicar a quien visita.</p>
         <p> - Al llegar una visita, se le debe notificar obligatoriamente a la persona que lo espera.</p>
-        <p> - A las personas que asisten diariamente al IF, deben llevar durante toda su estadía la Credencial otorgada por su Empresa.</p>
- 
+        <p> - A las personas que asisten diariamente al IF, deben llevar durante toda su estadía la Credencial otorgada por su
+          Empresa.</p>
+
       </div>
     </div>
     <!-- fin de espacio con informacion de pestañas-->
@@ -228,6 +231,7 @@
     };
     firebase.initializeApp(config);
   </script>
+
   <!-- Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
