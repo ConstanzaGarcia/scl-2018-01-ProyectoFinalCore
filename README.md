@@ -56,10 +56,10 @@ Su fácil administración permite una vista rápida e inmediata de los datos, qu
 
 ## 5) Diseño de Interfaz de usuario
 
-Para crear la interfaz se utilizaron los colores propios de IF Blanco. Blanco y negro, porque de esta forma la bienvenida al recinto es el sistema de registro de usuarios, que muestra una imagen cercana de un lugar. 
+Para crear la interfaz, se utilizaron los colores propios de IF Blanco, que son el blanco y el negro. También se utilizo un fondo opaco de personas que participan activamente en IF. De esta forma se da la bienvenida al recinto mediante el sistema de registro de usuarios, para hacerlo mas cercano.
 
 ![alt text](https://raw.githubusercontent.com/CamiRamirez/scl-2018-01-ProyectoFinalCore/master/Ux/Prototipos/Alta-Figma/1.PNG) 
 
 ### Visualización del prototipo
-Para ver el prototipo versión <b>Mobile</b> realizado en Figma, haz [click aquí.]
-(https://www.figma.com/proto/Ne4eY479vjm6mAxndG9R9J0Q/Registro-IF?node-id=1%3A2&scaling=scale-down)
+Para ver el prototipo versión <b>Mobile</b> realizado en Figma, haz click 
+[aquí.](https://www.figma.com/proto/Ne4eY479vjm6mAxndG9R9J0Q/Registro-IF?node-id=1%3A2&scaling=scale-down)
