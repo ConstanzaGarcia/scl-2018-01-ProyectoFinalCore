@@ -41,7 +41,7 @@ width: 7%;
 
 #datos{
   margin-top: 2%;
-  background-image: url(../../img/fondocopia.png);
+  background-image: url("https://raw.githubusercontent.com/ConstanzaGarcia/scl-2018-01-ProyectoFinalCore/master/docs/img/fondocopia.png");
   background-size: 100%;
   background-repeat: no-repeat;
   color: #E5E5E5;
@@ -172,7 +172,7 @@ width: 7%;
 }
 
 .backgroundWeb{
-  background-image: url(../../img/if.png);
+  background-image: url(img/ifpng);
   width: 100vw;
   height: 50vw;
 }
