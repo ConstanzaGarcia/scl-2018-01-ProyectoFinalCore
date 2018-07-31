@@ -1,6 +1,7 @@
 # Proyecto Final Common Core
 
 Este es un proyecto para <b>Laboratoria Chile </b> e <b>IF Blanco Recoleta </b> :
+![alt text](https://raw.githubusercontent.com/CamiRamirez/scl-2018-01-ProyectoFinalCore/master/img/logocompartido.jpg)
 
 ## Plataforma para el registro del ingreso de personas a IF Blanco Recoleta.
 
