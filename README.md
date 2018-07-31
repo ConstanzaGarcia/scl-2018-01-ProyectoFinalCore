@@ -34,16 +34,16 @@ Ambos, son lo que en la actualidad ingresan los datos de las personas en forma m
    * 2.3 Usuario III: Visitante, mayoritariamente con dominio de la tecnología. En ocasiones viene apurado o no sabe a donde va. 
 
 ### 3) El producto 
-![alt text](anexos/imagensuperior.PNG)
+![alt text](https://raw.githubusercontent.com/CamiRamirez/scl-2018-01-ProyectoFinalCore/master/anexos/Imagensuperior.PNG)
 
 Esta es una interfaz mobile first para registrar el ingreso de personas al espacio IF blanco Recoleta. Esta permite a la recepcionista del recinto ingresar en menor tiempo los datos de los visitantes y que estos a su vez, queden guardados en una tabla, la que le permitirá a la administradora, administrar los datos más simple y segura.
 
-![alt text](anexos/form.PNG) 
+![alt text](https://raw.githubusercontent.com/CamiRamirez/scl-2018-01-ProyectoFinalCore/master/anexos/form2.png) 
 
 Primero, toma una fotografía del visitante, luego sus datos como nombre, rut (paso que se puede omitir),patente del vehículo si es que esta estacionado en IF. Luego, debe seleccionar a quien visita. Una vez guardado los datos, se le notifica a la persona que su visita llego por medio de un correo electrónico. 
 
 Todos los datos ingresados se podran visualizar a través de una tabla, la que automáticamente genera el horario de ingreso y permitira filtrar por cualquiera de los datos ingresados su contenido. Permitiendo, reconocer cuantas veces una persona ha hecho ingreso al IF durante cierto periodo de tiempo.  
-![alt text](anexos/tabladatos.PNG) 
+![alt text](https://raw.githubusercontent.com/CamiRamirez/scl-2018-01-ProyectoFinalCore/master/anexos/tabladatos.PNG) 
 
 ## 4) La solución
 Este nuevo sistema permite de forma rápida y fácil que él o la recepcionista se registre al momento de ingresar en IF Blanco Recoleta. Si lo desean, también podría hacerlo el mismo usuario.
@@ -58,7 +58,7 @@ Su fácil administración permite una vista rápida e inmediata de los datos, qu
 
 Para crear la interfaz se utilizaron los colores propios de IF Blanco. Blanco y negro, porque de esta forma la bienvenida al recinto es el sistema de registro de usuarios, que muestra una imagen cercana de un lugar. 
 
-![alt text](UX/Prototipos/Alta-Figma/1.PNG) 
+![alt text](https://raw.githubusercontent.com/CamiRamirez/scl-2018-01-ProyectoFinalCore/master/Ux/Prototipos/Alta-Figma/1.PNG) 
 
 ### Visualización del prototipo
 Para ver el prototipo versión <b>Mobile</b> realizado en Figma, haz [click aquí.]
