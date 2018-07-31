@@ -1,4 +1,6 @@
-Este es un proyecto para <h2>Laboratoria Chile </h2> y IF Blanco Recoleta:
+# Proyecto Final Common Core
+
+Este es un proyecto para <h2>Laboratoria Chile </h2> y <h2>IF Blanco Recoleta </h2> :
 
 # Plataforma para el registro del ingreso de personas a IF Blanco Recoleta.
 
@@ -65,18 +67,6 @@ se puedan comunicar de manera rápida y fácil.
 ## 5) Diseño de Interfaz de usuario
 
 
-
-# Proyecto Final Common Core
-## Preámbulo
-
-## Introducción
-
-
-## Objetivos de aprendizaje
-
-### Consideraciones generales
-
-  
 ### Visualización del prototipo
 Para ver el prototipo versión <b>Mobile</b> realizado en Figma, haz [click aquí.]
 (https://www.figma.com/proto/Ne4eY479vjm6mAxndG9R9J0Q/Registro-IF?node-id=1%3A2&scaling=scale-down)
