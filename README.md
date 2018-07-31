@@ -34,7 +34,19 @@ Ambos, son lo que en la actulidad ingresan los datos de las personas en forma ma
 
 
 ### 3) El producto 
-![alt text](anexos/imagensuperior.png)
+![alt text](anexos/imagensuperior.PNG)
+
+Esta es una interfaz mobile first para registrar el ingreso de personas al espacio IF blanco Recoleta. Esta permite a la recepcionista del recinto ingresar en menor tiempo los datos de los visitantes y que estos a su vez, queden guardados en una tabla, la que le permitirá a la administradora, administrar los datos más simple y segura.
+
+![alt text](anexos/form.PNG) 
+
+Primero, toma una fotografía del visitante, luego sus datos como nombre, rut (paso que se puede omitir), patente del vehículo si es que esta estacionado en IF y que seleccione a quien visita, una vez guardado los datos se le notifica a la persona que su visita llego.
+
+
+<h3>Administradora </h3>
+![alt text](anexos/tabladatos.PNG) 
+
+Una vez guardados los datos, estos se pdoran visualizar a través de una tabla ordenada la que automáticamente genera el horario de ingreso y permitira filtrar por cualquiera de los datos ingresados su contenido.
 
 
 ¿Qué es?
