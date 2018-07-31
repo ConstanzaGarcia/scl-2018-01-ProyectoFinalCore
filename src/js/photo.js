@@ -51,7 +51,10 @@
     let takePhoto = document.getElementById('canvas');
     let dataPhoto = takePhoto.toDataURL();
     console.log(dataPhoto);
-    ;
+    
+    // photo.setAttribute('src', data);
+    // console.log('data');
+    
   }
 
   startbutton.addEventListener('click', function (ev) {

@@ -1,100 +1,65 @@
 # Proyecto Final Common Core
-## Preámbulo
-El registro de visitantes en una empresa en América Latina es un proceso tedioso y manual. Lo común es que una persona esté en la recepción tomando nota - a veces con papel y lápiz - de cada visitante. Por razones de seguridad, usualmente piden a cada visitante dejar una identificación. Si vivimos en la era digital, ¿por qué seguimos registrando visitantes como si fuera 1985? ¿Qué tal si sustituimos a la persona en recepción por una tablet? ¿Qué tal si en lugar de pedir una identificación, tomamos una foto? 
 
-## Introducción
-En este proyecto la empresa de coworking donde opera Laboratoria en tu ciudad ha decidido contratarte a ti y a dos compañeras para reinventar su proceso de registro de visitantes. Con la entrada de [WeWork](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwilrK_T5KjcAhWCj7MKHexzAEgYABAAGgJxbg&ohost=www.google.cl&cid=CAASE-RoAxXTp1Cd0ErxEHpPSGuF4Hk&sig=AOD64_38ykNPf0QRtI9n4CFtpQpth-MrNQ&q=&ved=0ahUKEwjswKvT5KjcAhVkU98KHUcYCeMQ0QwIJA&adurl=) al mercado latinoamericano, tienen mucha más competencia y necesitan invertir en tecnología para mejorar su servicio; el registro de visitantes es un primer acercamiento. Te dan la referencia de [Envoy](https://envoy.com/) en EEUU (un servicio que ofrece un sistema digital de registro de visitantes) y ustedes tienen que desarrollar una versión mínima viable (ver anexo I). 
+Este es un proyecto para <b>Laboratoria Chile </b> y <b>IF Blanco Recoleta </b> :
 
-## Objetivos de aprendizaje
-El objetivo principal de este proyecto es que pongas en práctica todo lo aprendido durante el common core, con foco en la calidad, trabajando en un equipo multifuncional y presentando tu solución a una audiencia.
-### Consideraciones generales
-Para completar este proyecto deberás trabajar en un equipo de tres y seguir las siguientes consideraciones:
-   * Planificación y organización
-   * Roles, squad multifuncional
-   
-Cada integrante del equipo debe asumir alguno de los siguientes “roles” (*) liderando las siguientes áreas de trabajo:
-   * Diseñadora UX
-      Diseñar la experiencia de la aplicación (flujo, interacción, etc.).
-      Identificar, documentar y priorizar las historias de usuario.
-      Crear el diseño visual de la interfaz.
-   * Desarrolladoras Front-end
-      Implementar la interfaz de usuario diseñada (HTML/CSS/JS).
-      Deben dividirse las funcionalidades entre las dos desarrolladoras.
-      Todas los desarrollos deben incluir pruebas unitarias.
+## Plataforma para el registro del ingreso de personas a IF Blanco Recoleta.
 
-*Al no haber rol de Product Manager, las responsabilidades de gestión son compartidas entre todas las integrantes.*
+### 1) Problema
 
-## Planificación inicial
-Es muy importante que al dividirse/distribuir/repartir el trabajo, lo hagan pensando de manera ágil y no en cascada. Es decir, si una de ustedes está esperando a que otra termine “su parte” para empezar a trabajar, algo anda mal, [¡eso se parece a la organización del trabajo industrial!](https://media.giphy.com/media/OQ872dEsRi8cU/source.gif). Todas son responsables del producto final y todas pueden (y deben) colaborar en el diseño, el desarrollo y la planificación.
+Registrar el ingresos de personas a un recinto cada día puede ser un proceso más tedioso, lento y manual. Completar una cantidad de hojas con un recuadro de datos que al final, terminan apiladas, llenas de polvo, sin sentido alguno y sin otro uso.
 
-### TIPS:
+Es así como Laboratoria nos contacto para mejorar el sistema de ingresos de [IF Blanco Recoleta](http://www.ifblanco.cl/), un espacio colaborativo donde interactúan personas de distintas disciplinas, en un contexto de ayuda recíproca.
 
-   * Recuerda a nuestras nuevas BFFs, [las historias de usuario](http://jmbeas.es/guias/historias-de-usuario/)
-   * Ten siempre en mente evitar el desperdicio. Por ejemplo: ¿de qué sirve que tengas el prototipo del 100% de un proyecto en              Figma (alta definición) si solamente implementas el 50% del proyecto? El otro 50% del prototipo se podría considerar como desperdicio.
-   * Limitar el trabajo en progreso. Si son 3 personas, procuren no tener más de 3 tareas a la vez en “doing”.
-   * ¿Estás segura de que quieren seguir invirtiendo más minutos de tu vida (que no volverán) en discutir los colores del logotipo? [Aquí hay algo que te puede ayudar a decidir](https://play.google.com/store/apps/details?id=com.flip.war_daddy.flip_coin).
+Al recinto a diario ingresan cientos de personas, desde trabajadores del lugar, proveedores y visistantes, quienes son personas que asisten a reuniones o visitan IF Blanco para realizar alguna actividad. 
+ 
+El ingreso se registra de forma manual por la recepcionista del recinto que trabaja de 8 a 18 hrs y posterior a ello por el portero que se retira a las 21 hrs. 
 
-## Detalles sobre la implementación
-  * La lógica del proyecto debe estar implementada completamente en JavaScript (ES6), HTML y CSS. 
-  * Está permitido usar librerías o frameworks tanto de CSS como de JS, pero no es obligatorio. Elige bien las batallas que quieres luchar.
-  * En este proyecto, no contamos con un boilerplate, por lo que deberás definir la estructura de carpetas y archivos que consideres necesaria, puedes guiarte de los proyectos anteriores. 
-  * Los tests y el setup necesario para ejecutarlos serán hechos enteramente por ti. 
-  * Para armar las interfaces visuales utiliza como base alguna de estas guías de componentes:
-    * [Guía Desktop 1](https://www.figma.com/file/F3aUqpHWOfZsEQifTPIleXo6/material-kit-free)
-    * [Guía Desktop 2](https://www.figma.com/file/S39H0B1LOnaVICIUiApFTfoP/_Style-Guide---Desktop---Style-Guide)
-    * [Guía Mobile 1](https://www.figma.com/file/00VTwmTNvLVaBLkxrMFbT8/Google-Material-Design)
-    * [Guía Mobile 2](https://www.figma.com/file/O2Xraz3mraQHvevNsicMl91V/ejemplos-2)
-  * Guardar la data de los visitantes de forma remota usando [Firebase](https://firebase.google.com/). 
-  * A nivel de arquitectura:
-    * El uso de Firebase implica que debes trabajar bajo una arquitectura serverless. 
-    * Te sugerimos que desacoples el proyecto en componentes y manejo de estados para que trabajes de forma ordenada y facilite la implementación de tus tests. Revisa la [charla](https://www.youtube.com/watch?v=g_BxnUJTUSk) y el [blog post](https://medium.com/laboratoria-developers/arquitectura-de-interfaces-web-parte-1-a41053c2a1f2) de Lupo sobre este tema ;)
+Consiste en una hoja con una tabla en la que a la persona se le solicita Nombre, rut, patente, hora de ingreso y a quien visita. Posterior a ello, se le entrega una credencial que es distintitva según el lugar al que viene.
 
-## Tiempo
-Tendrán 3 días para trabajar en este proyecto. Este tiempo es un poco corto para iterar y hacer las ceremonias que usualmente hacemos. Puedes elegir hacer tus sprints o simplemente correr un único sprint con “hitos”. Es decisión del equipo. Lo que sí les recomendamos es asegurar que usan bien los dailys, esto les permitirá hacer “mini” iteraciones cada 24 horas.
+Para notificar el ingreso de una visita, existe un grupo de whatsapp donde se encuentra una persona de cada espacio, a la que se le notifica que en porteria hay un visitante al que deben ir a buscar en la recepción, de no pasar esto y que nadie asista a buscarlo, es el mismo recepcionista o alguien de IF qu va a dejarlo al lugar que viene.
 
-## Entregables obligatorios
-Los criterios mínimos de aceptación para considerar que has completado este proyecto son:
+La salida del recinto se notifica cuando la persona hace devolución de la credencial. 
 
-### Diseño:
-Entregables de diseño :
-  * Haber realizado y documentado (con fotos, videos, aprendizajes, etc.)  al menos 3 entrevistas con usuarios diferentes.
-  * Haber probado de “cliente incógnito” el registro de visitas en WeWork y compararla con tu solución y con la referencia que te brindaron ([Envoy](https://envoy.com/)).
-  * Entregar un prototipo clickeable de alta fidelidad hecho en [Figma](https://www.figma.com/) u otro editor gráfico como Illustrator, Photoshop, PowerPoint, Keynote, etc. linkeado con [Marvel](https://marvelapp.com/) / [Invision](https://www.invisionapp.com/).
-  * Haber hecho y documentado (con fotos, videos, aprendizajes, lista de cambios realizados, etc.) sesiones de testing del prototipo con usuarios.
+### 2) Principales usuarios
 
-### Implementación:
-  * Tu producto final debe estar desplegado en la web y, como mínimo, debe:
-  * Permitir al usuario visitante registrarse con sus datos personales, incluyendo su foto.
-  * Permitir al usuario visitante seleccionar a la persona a quien viene a visitar.
-  * Notificar a la persona a quien vienen a visitar. Para esto te recomendamos revisar:
-    * Los servicios de [Sendgrid](https://sendgrid.com/ )
-    * El API de [Mandrill](https://mandrillapp.com/docs/) para mandar correos de forma automática
-    * El [API de notificaciones de HTML 5](https://developer.mozilla.org/en-US/docs/Web/API/notification)
-  * Permitir al usuario administrador visualizar la data de los visitantes, incluyendo la fecha y hora de registro de cada uno
-  * Los tests unitarios deben cubrir un mínimo del 70% de statements, functions y lines, y un mínimo del 50% de branches. 
+Para identidicar a los usuarios del producto, considerando los requerimientos de Laboratoria y las jornadas de observación que realizamos en porteria nos dimos cuenta que el principal usuario es la recepcionista y el portero.
 
-### Presentación:
-Deberás hacer dos presentaciones ante un jurado que te dará feedback inmediatamente. La primera será a mitad de semana para compartir tu avance y la segunda será al final de la semana para compartir tu producto final.
-#### Las reglas para las dos presentaciones son:
-  * Tendrás 3 minutos de presentación, ni un segundo más.
-  * Habrán 2 minutos para preguntas del jurado.
-  * Te recomendamos que la mayoría del tiempo lo enfoque en demostrar cómo se utiliza tu producto, el cual debe estar desplegado en la web. 
-  * NO se permite presentar cosas en tu local ni videos previamente grabados.
-  * NO inviertas tiempo presentándote, ni listando al equipo, ni dando una introducción que ya el jurado conoce. Como al hacer el producto, en la presentación también debes priorizar qué decir.
-  * NO utilices slides de powerpoint, enfócate en presentar tu DEMO.
-  * Durante el DEMO, enfócate en narrar y explicar el valor que tu producto le brinda al usuario.
-  * Cuida tu lenguaje no verbal; recuerda mirar al público y tener un tono de voz adecuado para que toda la audiencia te pueda escuchar.
-  * Idealmente debe presentar una sola integrante del equipo. Si deciden que presenta más de una persona, asegúrense de haber coordinado bien el flujo de la presentación.
+Ambos, son lo que en la actulidad ingresan los datos de las personas en forma manual a la plantilla y que reconocen que las personas son "bastante comodas" para auto-registrarse en la entrada del recinto, ádemas que uno de sus principales problemas es que las personas al venir rápido alguna reunión, a veces omiten alguno de los datos que se solicitan o que no se saben su patente y se molestan en que se las pidan dos veces. Debido a que frente al recinto, se encuentra el estacionamiento.
 
-### Hacker edition
-Features/características extra sugeridas:
-  * Como el WiFi a veces es nuestro peor enemigo, ¿es posible que tu aplicación pueda, sin Internet, registrar los datos del visitante, guardar los datos localmente y cuando tenga Internet mandarlos a la base de datos? Si te animas a hacer esto dale una revisada a los siguientes recursos:
-    * [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
-    * [Offline first manifesto](http://offlinefirst.org/)
-    * También sería ideal poder registrar la firma del visitante en el registro.
-  * Sería genial también permitir generar un “pase” para el visitante, así fácilmente a la vista se sabe quién está de visita.
-  * Al administrador le interesa tener un dashboard de “analíticas” de los visitantes: # de visitantes por día, horarios frecuentes de visita, a quién vienen a visitar, etc.
 
-## Anexo I: Construyendo un MVP
-Una modelo mental común para representar el desarrollo de productos es visualizarlo como una pirámide: el producto que construyes consiste en una serie de funcionalidades que le dan beneficios al usuario, los cuales le generan valor. El detalles está en que no todas las funcionalidades que creas le agregan la misma cantidad de valor al usuario. Es más, muchas funcionalidades le agregan cero valor. Son cosas que creemos que generan valor, pero que no terminan haciéndolo (recuerda que vivimos en un mundo incierto, donde no podemos predecir). Por lo tanto, al definir tu producto mínimo viable (MVP), tu misión es crear las mínimas funcionalidades que maximicen el valor que entregas. Menos es más ;)
-![image](https://user-images.githubusercontent.com/7809496/43321432-d253abe8-9179-11e8-8d08-44a44db6ed0a.png)
+   * 2.1 Usuario I: Claudia, 38 años, casada con hijos, usuaria de smartphone, dominio computacional básico. Dominaba el pc que existia en recepción para el ingreso de visitantes antes de su extravió. Utiliza su número personal para notificar el ingreso de visitas al recinto, cumple un horario de 8 am a 18 horas. Lleva menos de un año trabajando en IF. 
+
+   * 2.2 Usuario II: Rudy, 67 años, no es usuario de smatphone y reconoce que no se maneja con la tecnología. Esta dispuesto aprender si el trabajo se lo requiere. Reemplaza a Claudia cuando ella va almorzar o al baño. Lleva más de un año en IF.
+
+   * 2.3 Usuario III: Visitante, mayoritariamente con dominio de la tecnología. En ocasiones viene apurado o no sabe a donde va. 
+
+### 3) El producto 
+![alt text](anexos/imagensuperior.PNG)
+
+Esta es una interfaz mobile first para registrar el ingreso de personas al espacio IF blanco Recoleta. Esta permite a la recepcionista del recinto ingresar en menor tiempo los datos de los visitantes y que estos a su vez, queden guardados en una tabla, la que le permitirá a la administradora, administrar los datos más simple y segura.
+
+![alt text](anexos/form.PNG) 
+
+Primero, toma una fotografía del visitante, luego sus datos como nombre, rut (paso que se puede omitir),patente del vehículo si es que esta estacionado en IF. Luego, debe seleccionar a quien visita, una vez guardado los datos se le notifica a la persona que su visita llego por medio de un correo electrónico. 
+
+Una vez guardados los datos, estos se podran visualizar a través de una tabla ordenada la que automáticamente genera el horario de ingreso y permitira filtrar por cualquiera de los datos ingresados su contenido. Permitiendo, reconocer cuantas veces una persona ha hecho ingreso al IF durante cierto periodo de tiempo.  
+![alt text](anexos/tabladatos.PNG) 
+
+## 4) La solución
+Este nuevo sistema permite de forma rápida y fácil que el o la recepcionista se registre al momento de ingresar en IF Blanco Recoleta. También, sin problemas podría hacerlo el mismo usuario.
+
+Su ventaja es el tiempo que disminuye el proceso de registro, porque podría demorarse solo un minuto de acuerdo al manejo del dispotivo tenga el usuario.
+
+Además, es ecológico porque ya no van a tener que imprimir más hojas de papel con tablas que se van acumular sin revisión alguna desde la administración u otra persona. 
+
+Su fácil administración permite una vista rápida e inmediata de los datos, que le permitiran tomar decisiones inmediata o más rápido. Por ejemplo, los días viernes ingresan más personas a las 9 am dentro de un mes, es por eso que se toma la decisión que a esa hora se pondrá un guardia de punto fijo en la puerta. 
+
+## 5) Diseño de Interfaz de usuario
+
+Para crear la interfaz se utilizaron los colores propios de IF Blanco. Blanco y negro, porque de esta forma la bienvenida al recinto es el sistema de registro de usuarios, que muestra una imagen cercana de un lugar. 
+
+![alt text](UX/Prototipos/Alta-Figma/1.PNG) 
+
+### Visualización del prototipo
+Para ver el prototipo versión <b>Mobile</b> realizado en Figma, haz [click aquí.]
+(https://www.figma.com/proto/Ne4eY479vjm6mAxndG9R9J0Q/Registro-IF?node-id=1%3A2&scaling=scale-down)

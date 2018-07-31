@@ -65,7 +65,7 @@ options.text = '¿A quién visitas?';
 optionsMenu.add(options);
 optionsMenu.selectedIndex = '';
 
-const dataJson = 'data/local.json';
+const dataJson = '../data/local.json';
 
 fetch(dataJson)
   .then(
@@ -79,14 +79,25 @@ fetch(dataJson)
       //Revisa la información con "response" 
       response.json().then(function (data) {
         let option;
-
+        
         for (let i = 0; i < data.length; i++) {
           option = document.createElement('option');
+          //option.classList.add('opcionVisita');
           option.text = `
-          ${data[i].name} (${data[i].Empresa})
+          ${data[i].name} (${data[i].empresa})
           `;
 
           optionsMenu.add(option);
+
+
+          // Tabla de datos de personas y con sus respectivas empresas
+          empresasContainer.innerHTML = `
+           <tr>
+            <td>${data[i].name}</td>
+            <td>${data[i].email}</td>
+            <td>${data[i].empresa}</td>
+            </tr> 
+          `+ empresasContainer.innerHTML;
         }
       });
     }
@@ -94,5 +105,6 @@ fetch(dataJson)
   .catch(function (err) {
     console.error('Fetch Error -', err);
   });
+
 
 

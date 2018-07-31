@@ -1,5 +1,6 @@
 let takePhoto = document.getElementById('canvas');
-let dataPhoto = takePhoto.toDataURL();
+    let dataPhoto = takePhoto.toDataURL();
+    console.log(dataPhoto);
 
 //DATOS INGRESADOS QUE SE GUARDAN EN TABLA
 firebase.database().ref('visitas')
@@ -22,7 +23,7 @@ firebase.database().ref('visitas')
     <td>${newMessage.val().ruts}</td>
     <td>${newMessage.val().patentes} </td>
     <td>${time.getHours()}:${time.getMinutes()} del día ${time.getDate()}/${time.getMonth() + 1}/${time.getFullYear()}</td>
-    <td id="visitNN";></td>
+    <td><img src="${dataPhoto}" alt="algo"></td>
     </tr> 
           `+ invitadosContainer.innerHTML;
   });
@@ -38,8 +39,7 @@ function sendMessage() {
     const name = inputName.value;
     const rut = inputRut.value;
     const patente = inputPatente.value;
-
-
+    
     //Para tener una nueva llave en la colección visitas
     const newMessageKey = firebase.database().ref().child('visitas').push().key;
 
@@ -48,9 +48,7 @@ function sendMessage() {
       ruts: rut,
       patentes: patente,
       time: Date.now(),
-      photo: dataPhoto
-
-
+      foto: dataPhoto
     });
     inputName.value = '';
     inputRut.value = '';

@@ -14,7 +14,7 @@
     crossorigin="anonymous">
   <title>Registro de visitas IF</title>
 
-  <link rel="shortcut icon" type="image/x-icon" href="img/logoifpequeño.png">
+  <link rel="shortcut icon" type="image/x-icon" href="img/logoif.png">
 
 </head>
 
@@ -56,7 +56,7 @@
 
       <div class="row">
         <div class="col-md-6 offset-md-3">
-          <select class="custom-select" id="optionsContainer" size="3">
+          <select class="custom-select" id="optionsContainer" size="4">
             <option selected>
           </select>
         </div>
@@ -64,13 +64,13 @@
 
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <button type="button" id="btnEnviarDatos" onclick="sendMessage()" class="btn btn-secondary btn-lg btn-block">Ingresar visita</button>
+      <button type="button" id="btnEnviarDatos" onclick="sendMessage()" class="btn btn-secondary btn-lg btn-block">Registrar visita <i class="far fa-check-circle"></i></button>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <button type="button" id="btnEnter" class="btn btn-secondary btn-lg btn-block">Ver datos y registros</button>
+    <div class="col-12">
+      <button type="button" id="btnEnter"> <i class="fas fa-file-alt"></i>  Libro de visitas y datos</button>
     </div>
   </div>
   </section>
@@ -118,7 +118,7 @@
 
       </li>
       <li class="col-sm nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" id="btnInfoEmpresas"  data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false">
           Personas y Empresas</a>
 
       </li>
@@ -140,10 +140,10 @@
         <!-- inicio busqueda por nombre -->
         <a class="navbar-brand"></a>
         <form class="form-inline">
-          <input class="form-control mr-sm-2" id="searchBox" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por nombre..."
+          <input class="form-control mr-sm-2" id="searchBox" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por dato..."
             aria-label="Search">
           <i class="fas fa-search"></i>
-          </button>
+        </input>
         </form>
 
         <table class="table table-bordered">
@@ -160,7 +160,22 @@
           </tbody>
         </table>
       </div>
-    </div>
+
+       <!-- Listado de personas y empresas -->
+      <div class="col-sm-12" id="listaEmpresas">
+        
+        <a class="navbar-brand"></a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" id="searchBox2" onkeyup="onSearchBoxChange()" type="search" placeholder="Búsqueda por dato..."
+            aria-label="Search">
+          <i class="fas fa-search"></i>
+        </input>
+        </form>
+
+
+      </div>
+
+    </div> <!-- fin de espacio para tablas -->
 
 
 
@@ -193,6 +208,7 @@
   <!-- javascript local -->
   <script src="js/main.js"></script>
   <script src="js/data.js"></script>
+  <script src="js/photo.js"></script>
 
 </body>
 
