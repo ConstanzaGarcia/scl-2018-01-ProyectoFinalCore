@@ -48,7 +48,7 @@
           <form>
             <div class="form-group">
               <input class="form-control form-control-sm" type="text" id="inputName" placeholder="Nombre y apellido">
-              <input class="form-control form-control-sm" type="text" id="inputRut" placeholder="Rut">
+              <input class="form-control form-control-sm" type="text" minlength="9" maxlength="10" oninput="validateRut(this)" id="inputRut" placeholder="Rut">
               <input class="form-control form-control-sm" type="text" id="inputPatente" placeholder="Patente (Sólo si estacionó en IF)">
             </div>
           </form>
@@ -239,6 +239,8 @@
   <script src="js/main.js"></script>
   <script src="js/data.js"></script>
   <script src="js/photo.js"></script>
+  <script src="js/email.js"></script>
+  <script src="js/rut.js"></script>
 
 </body>
 
