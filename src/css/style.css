@@ -216,7 +216,7 @@ text-align: center;
 
 #newVisit{
   position: float;
-  padding: 0;
+  padding: 1;
   background-color: white;
   color: #222222;
   border-radius: 5px;

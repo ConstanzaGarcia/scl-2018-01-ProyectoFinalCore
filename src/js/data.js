@@ -44,7 +44,6 @@ function sendMessage() {
       ruts: rut,
       patentes: patente,
       time: Date.now(),
-      visit: j,
 
     });
     inputName.value = '';
@@ -83,7 +82,7 @@ fetch(dataJson)
         
         for (let i = 0; i < data.length; i++) {
           option = document.createElement('option');
-          option.classList.add('opcionVisita');
+          //option.classList.add('opcionVisita');
           option.text = `
           ${data[i].name} (${data[i].empresa})
           `;
