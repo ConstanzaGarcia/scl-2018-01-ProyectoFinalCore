@@ -1,37 +1,10 @@
-// var nodemailer = require('nodemailer');
-// var sgTransport = require('nodemailer-sendgrid-transport');
+var template_params = {
+  "reply_to": "reply_to_value",
+  "to_name": "to_name_value",
+  "from_name": "from_name_value",
+  "message_html": "message_html_value"
+}
 
-// // api key 
-// var options = {
-//   auth: {
-//     api_key: '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'
-//   }
-// }
-
-// // or
-
-// // usuario y contraseña
-// var option = {
-//   auth: {
-//     api_user: 'carolastra',
-//     api_key: 'carolo3030'
-//   }
-// }
-  
-// var mailer = nodemailer.createTransport(sgTransport(options));
-
-// //Creando email
-// var email = {
-//   to: ['joe@foo.com', 'mike@bar.com'],
-//   from: 'roger@tacos.com',
-//   subject: 'Hi there',
-//   text: 'Awesome sauce',
-//   html: '<b>Awesome sauce</b>'
-// };
-
-// mailer.sendMail(email, function(err, res) {
-//   if (err) { 
-//     console.log(err) 
-//   }
-//   console.log(res);
-// });
+var service_id = "default_service";
+var template_id = "template_5mCSN8UY";
+emailjs.send(service_id,template_id,template_params);

@@ -207,9 +207,6 @@
     </div>
     <!-- fin de espacio con informacion de pestañas-->
 
-
-
-
   </div>
   <!-- fin de container -->
 
@@ -228,6 +225,15 @@
     };
     firebase.initializeApp(config);
   </script>
+
+  <!-- Send email -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+     (function(){
+        emailjs.init("user_X94opDyB0Cr8p5WhMMssC");
+     })();
+  </script>
+
   <!-- Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
