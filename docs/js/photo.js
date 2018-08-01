@@ -48,8 +48,13 @@
     canvas.width = width;
     canvas.height = height;
     canvas.getContext('2d').drawImage(video, 0, 0, width, height);
-    var data = canvas.toDataURL('image/png');
-    photo.setAttribute('src', data);
+    let takePhoto = document.getElementById('canvas');
+    let dataPhoto = takePhoto.toDataURL();
+    console.log(dataPhoto);
+    
+    // photo.setAttribute('src', data);
+    // console.log('data');
+    
   }
 
   startbutton.addEventListener('click', function (ev) {

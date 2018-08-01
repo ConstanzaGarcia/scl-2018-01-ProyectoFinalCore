@@ -28,11 +28,13 @@ Para identidicar a los usuarios del producto, considerando los requerimientos de
 Ambos, son lo que en la actualidad ingresan los datos de las personas en forma manual a la plantilla y que reconocen que las personas son "bastante cómodas" para auto-registrarse en la entrada del recinto, ádemas que uno de sus principales problemas es que las personas al venir rápido alguna reunión, a veces omiten alguno de los datos que se solicitan o que no se saben su patente y se molestan en que se las pidan dos veces. Debido a que frente al recinto, se encuentra el estacionamiento.
 
 
-   * 2.1 Usuario I: Claudia, 38 años, casada con hijos, usuaria de smartphone, dominio computacional básico. Dominaba el pc que existia en recepción para el ingreso de visitantes antes de su extravió. Utiliza su número personal para notificar el ingreso de visitas al recinto, cumple un horario de 8 am a 18 horas. Lleva menos de un año trabajando en IF. 
+   * 2.1 Usuario I: Claudia, 38 años, casada con hijos, usuaria de smartphone, dominio computacional básico. Dominaba el pc que existía en recepción para el ingreso de visitantes antes de su extravió. Utiliza su número personal para notificar el ingreso de visitas al recinto, cumple un horario de 8 am a 18 horas. Lleva menos de un año trabajando en IF. 
 
    * 2.2 Usuario II: Rudy, 67 años, no es usuario de Smartphone y reconoce que no se maneja con la tecnología. Esta dispuesto aprender si el trabajo se lo requiere. Reemplaza a Claudia cuando ella va almorzar o al baño. Lleva más de un año en IF.
 
    * 2.3 Usuario III: Visitante, mayoritariamente con dominio de la tecnología. En ocasiones viene apurado o no sabe a donde va. 
+
+   * 2.4 Usuario IV: Administradora, domina la tecnología, busca darle una utilidad a los registros que se generan a diario en el IF.
 
 ### 3) El producto 
 ![alt text](https://raw.githubusercontent.com/CamiRamirez/scl-2018-01-ProyectoFinalCore/master/anexos/Imagensuperior.PNG)
