@@ -48,32 +48,24 @@
     canvas.width = width;
     canvas.height = height;
     canvas.getContext('2d').drawImage(video, 0, 0, width, height);
-    // let takePhoto = document.getElementById('canvas');
-    // let dataPhoto = takePhoto.toDataURL();
-    // console.log(dataPhoto);
-
+    let takePhoto = document.getElementById('canvas');
+    let dataPhoto = takePhoto.toDataURL();
+    console.log(dataPhoto);
+    
     // photo.setAttribute('src', data);
     // console.log('data');
-    videoTracks.forEach((track) => {
-      track.stop();
-    });
-  };
-
-  newCapture.addEventListener('click', () => {
-    navigator.mediaDevices.getUserMedia({ video: true })
-      .then(handleSuccess);
-  });
-
-  navigator.mediaDevices.getUserMedia({ video: true })
-    .then(handleSuccess)
-
+    
+  }
 
   startbutton.addEventListener('click', function (ev) {
     takepicture();
     ev.preventDefault();
   }, false);
 
+})();
 
-} )
+
+
+
 
 
