@@ -172,7 +172,7 @@ width: 7%;
 }
 
 .backgroundWeb{
-  background-image: url(img/ifpng);
+  background-image: url("https://raw.githubusercontent.com/ConstanzaGarcia/scl-2018-01-ProyectoFinalCore/master/docs/img/if.png");
   width: 100vw;
   height: 50vw;
 }
