@@ -1,6 +1,13 @@
 let takePhoto = document.getElementById('canvas');
     let dataPhoto = takePhoto.toDataURL();
     console.log(dataPhoto);
+   
+  
+ 
+
+ 
+
+ 
 
 //DATOS INGRESADOS QUE SE GUARDAN EN TABLA
 firebase.database().ref('visitas')
@@ -70,7 +77,7 @@ optionsMenu.add(options);
 
 optionsMenu.selectedIndex = '';
 
-const dataJson = 'data/local.json';
+const dataJson = '../data/local.json';
 
 fetch(dataJson)
   .then(
